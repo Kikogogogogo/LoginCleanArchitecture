@@ -130,9 +130,7 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
         this.add(buttons);
     }
 
-    /**
-     * React to a button click that results in evt.
-     */
+
     public void actionPerformed(ActionEvent evt) {
         System.out.println("Cancel not implemented yet.");
     }
