@@ -1,5 +1,4 @@
 package view;
-
 import interface_adapter.SignupController;
 import interface_adapter.SignupState;
 import interface_adapter.SignupViewModel;
