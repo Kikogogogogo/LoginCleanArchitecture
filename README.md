@@ -28,7 +28,7 @@ the CA Engine and start it running.
 
 In most cases, each class is named according to its role in the CA Engine.
 
-### Entities
+### Entities   
 
 These objects represent the fundamental data for the application. The classes
 are named after concepts from the problem domain, like "bank account", "personal

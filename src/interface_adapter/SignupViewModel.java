@@ -2,6 +2,7 @@ package interface_adapter;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.net.http.WebSocket;
 
 public class SignupViewModel extends ViewModel {
 
@@ -20,7 +21,9 @@ public class SignupViewModel extends ViewModel {
     }
 
     public void setState(SignupState state) {
+        SignupState oldState = this.state;
         this.state = state;
+        support.firePropertyChange("state", oldState, this.state);
     }
 
     private final PropertyChangeSupport support = new PropertyChangeSupport(this);
@@ -33,6 +36,9 @@ public class SignupViewModel extends ViewModel {
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {
         support.addPropertyChangeListener(listener);
+    }
+    public void removePropertyChangeListener(PropertyChangeListener listener){
+        support.removePropertyChangeListener(listener);
     }
 
     public SignupState getState() {
